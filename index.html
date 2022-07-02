@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    /* #navbar{
+        position: relative;
+        top: 0px;
+    } */
+    #navbar{
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 0px;
+
+    }
+    #logo{
+         margin:10px 34px ;
+    }
+    #logo img{
+      height: 59px;
+      margin: 3px 6px;
+    }
+    #navbar ul{
+        display: flex;
+    }
+    #navbar::before{
+        content: "";
+        background-color: black;
+        position: absolute;
+        top :0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.4;
+
+    }
+
+    #navbar ul li{
+        list-style: none;
+        font-size: 1.3rem;
+    }
+    #navbar ul li a{
+        color: white;
+        display: block;
+        padding: 3px 22px;
+        border-radius: 20px;
+        text-decoration: none;
+    }
+    #navbar ul li a:hover{
+        color: black;
+        background-color: white;
+    }
+    #home{
+        display: flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        height: 494px;
+        justify-content: center;
+        align-items: center;
+    }
+    #home::before{
+        content: "";
+        position: absolute;
+        background: url('../back4.jpg') no-repeat center center/cover;
+       top: 0px;
+       left: 0px;
+        height: 75%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.89;
+        
+    }
+    #home h1{
+        color: white;
+        text-align: center;
+    }
+    #home p{
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    /* utility class */
+    .primary{
+      font-size: 3.8rem;
+      padding: 12px;
+
+    }
+     .btn{
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: brown;
+        color: white;
+        margin: 17px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+     }
+     .primary2{
+        background-color: white;
+        color: #181b1b;
+        text-align: center;
+     }
+    /* #container{
+     margin: 34px;
+     display: flex;
+    } */
+    #Services{
+        margin: 10px;
+        display: flex;
+    }
+    #Services .box{
+        border: 2px solid brown;
+        padding: 34px;
+        margin: 3px 6px;
+        border-radius: 26px;
+        background-color: aliceblue;
+    }
+    #Services .box img{
+        height: 100px;
+        margin: auto;
+        display: block;
+    }
+    .primary3{
+        text-align: center;
+    }
+    #client-section{
+        height: 300px;
+        position: relative;
+       
+       
+    }
+    #client-section::before{
+        content: "";
+        position: absolute;
+        background: url('../best.jpg') no-repeat center center/cover;
+        /* background-repeat: no-repeat; */
+        width: 100%;
+        height: 300px;
+        z-index: -1;
+        opacity: 0.7;
+
+    }
+    #clients{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .client-item{
+        padding: 34px;
+    }
+    #clients img{
+        height: 50px;
+    }
+    .primary4{
+        text-align: center;
+    }
+    .primary5{
+        text-align: center;
+    }
+    #contact{
+        position: relative;
+    }
+    #contact::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url('../back3.jpg') no-repeat center center/cover;
+        z-index: -1;
+        opacity: 0.7;
+        
+        
+    }
+    #contact-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 34px;
+    }
+    #contact-box input,#contact-box textarea{
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+    }
+    #contact-box form{
+        width: 40%;
+    }
+    #contact-box label{
+        font-size: 1.3rem;
+    }
+    footer{
+        background-color: #181b1b;
+        color: white;
+        padding: 9px 20px;
+        text-align: center;
+    }
+    
+    
+     
+
+
+
+</style>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo.png" alt="food">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Conact Us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="primary">Welcome to online Meal</h1>
+        <p>Fresh,healthy,and delicious food,deliverd to your door.</p>
+        <p>Are you hungry?Don't wait! let start to order food now.</p> 
+        <button class="btn">Order Now</button>
+
+    </section>
+    
+       <section class="container">
+        <h1 class="primary2">Our Services</h1>
+       <div id="Services">
+        <div class="box">
+        <img src="burger.png" alt="pizza">
+       <h2 class="primary3">Food Catering</h2>
+        <p class="center">Do you have a special seasonal or LTO menu item you want to feature?
+            Rather than just upselling through your servers or placing a chalkboard outside with a pithy message, 
+            generate some hype about it online.
+            Create a page all about your Spiced Pumpkin
+             Pie Milkshake or your Butternut Squash Custard, 
+             and tell your customers why you love it. Use the same language you would on your menu, with exciting adjectives about how 
+            drool-worthy and delectable this new treat is.
+             </p>
+         </div>   
+         <div class="box">
+            <img src="pizza.png" alt="pizza">
+           <h2 class="primary3">bulk Ordering</h2>
+            <p class="center">Do you have a special seasonal or LTO menu item you want to feature?
+                Rather than just upselling through your servers or placing a chalkboard outside with a pithy message, 
+                generate some hype about it online.
+                Create a page all about your Spiced Pumpkin
+                 Pie Milkshake or your Butternut Squash Custard, 
+                 and tell your customers why you love it. Use the same language you would on your menu, with exciting adjectives about how 
+                drool-worthy and delectable this new treat is.</p>
+             </div>   
+             <div class="box">
+                <img src="bike.png" alt="pizza">
+               <h2 class="primary3">Food Ordering</h2>
+                <p class="center">Do you have a special seasonal or LTO menu item you want to feature?
+                    Rather than just upselling through your servers or placing a chalkboard outside with a pithy message, 
+                    generate some hype about it online.
+                    Create a page all about your Spiced Pumpkin
+                     Pie Milkshake or your Butternut Squash Custard, 
+                     and tell your customers why you love it. Use the same language you would on your menu, with exciting adjectives about how 
+                    drool-worthy and delectable this new treat is.</p>
+                 </div>    
+            </div>
+       </section>
+  <section id="client-section">
+    <h1 class="primary4">Our client</h1>
+    <div id="clients">
+        <div class="client-item">
+        <img src="logo2.png" alt="google">
+        </div>
+        <div class="client-item">
+            <img src="logo3.png" alt="google">
+            </div>
+            <div class="client-item">
+                <img src="logo4.png" alt="google">
+                </div>
+    </div>  
+</section>
+<section id="contact">
+    <h1 class="primary5">Contact us</h1>
+    <div id="contact-box">
+        <form action="">
+            <div class="form group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="enter your name">
+         </div>
+         <div class="form group">
+            <label for="Email">Email:</label>
+            <input type="text" id="Email" name="name" placeholder="enter your Email">
+         </div>
+         <div class="form group">
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="name" placeholder="enter your phone number">
+         </div>
+         <div class="form group">
+            <label for="Meassage">Meassage</label>
+          <textarea name="message" id="Meassage" cols="30" rows="10"></textarea>
+         </div>
+         <button class="btn">Submit</button>
+        </form>
+    </div>
+</section>
+<footer>
+    <div class="center">
+        Copyright &copy; www.myonlineMeal.com All rights!
+    </div>
+</footer>
+    
+</body>
+</html>
